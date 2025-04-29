@@ -1,11 +1,13 @@
-import Message from './messages/Message'
-import Movie from './Movie/Movie'
+import Message from "./Message/Message";
+//import './assets/bs/bootstrap.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 let App = ()=>{
 
 return <div>
             <h1>App Componet</h1>
+            <button className="btn btn-danger">Test</button>
             <hr />
-            <Movie/>
+            <Message/>
            
        </div>
 
