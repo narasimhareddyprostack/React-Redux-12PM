@@ -1,21 +1,21 @@
 import Axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 let Users=()=>{
    let [users,setUsers] = useState([])
-   useEffect(()=>{
+   let getDataHandler = ()=>{
     Axios.get('https://jsonplaceholder.typicode.com/users')
-    .then((response)=>{
-       console.log(response.data)
-       setUsers(response.data)
-    })
-    .catch((err)=>{
-       console.log(err.message)
-    })
-   },[])
-   return <div className='container'>
+         .then((response)=>{
+            console.log(response.data)
+            setUsers(response.data)
+         })
+         .catch((err)=>{
+            console.log(err.message)
+         })
+   }
+    return <div className='container'>
             <h3>User Component</h3>
             <pre>{JSON.stringify(users)}</pre>
-          
+            <button onClick={getDataHandler}>Get Data</button>
             <div className='row'>
             <div className='col-4'>
             <table className='table'>
@@ -49,4 +49,5 @@ let Users=()=>{
            
            </div>
 }
+
 export default Users;
