@@ -1,0 +1,7 @@
+Step 1: install required dipendencies
+
+npm i @redux-devtools/extension redux react-redux
+
+step2: install crome extension
+       redux devtools
+step3:create folder structure
